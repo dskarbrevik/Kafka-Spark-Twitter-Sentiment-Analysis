@@ -5,15 +5,20 @@ set hive.exec.dynamic.partition.mode=nonstrict;
 --Load sample Twitter JSON data into the twitter_raw_json table
 --Note: need to upload the data file to HDFS first
 
-load data inpath '/user/w205/twitter/sample_twitter_data.json'
+load data inpath '/user/w205/twitter/sentiment_corpus_hillary.json'
 into table twitter_raw_json
 partition (batchid = 1);
+
+load data inpath '/user/w205/twitter/sentiment_corpus_trump.json'
+into table twitter_raw_json
+partition (batchid = 2);
 
 --Tranform the JSON data and load into the twitter_structured_data table
 from twitter_raw_json
 insert overwrite table twitter_structured_data
 partition (batchid)
 select
+        topic,
         cast(get_json_object(json_response, '$.id_str') as bigint),
         to_utc_timestamp(concat
         (
