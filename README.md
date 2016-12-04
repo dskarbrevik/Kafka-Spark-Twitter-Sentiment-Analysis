@@ -1,5 +1,5 @@
 # MIDSW205_Project - Political Sentiment Analysis
-MIDS W205 Group Project (section 4 - David Skarbrevik and Shuang Chan)
+MIDS W205 Group Project (Section 4 - David Skarbrevik and Shuang Chan)
 
 Prerequisites:
 
