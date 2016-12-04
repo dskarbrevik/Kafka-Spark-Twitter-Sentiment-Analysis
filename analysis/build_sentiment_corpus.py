@@ -2,6 +2,9 @@
 #UBS W205 Course Project
 #Build Twitter Sentiment Corpus
 #The corpus is used as a training dataset for future sentiment analysis
+#Created By: Shuang Chan, David Skarbrevik
+#Created On: 11/01/2016
+#Target Environment: PYTHON 3.4
 
 #The implementation is based on the concept from the following paper
 #http://cs.stanford.edu/people/alecmgo/papers/TwitterDistantSupervision09.pdf
