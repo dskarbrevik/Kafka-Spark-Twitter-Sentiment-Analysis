@@ -28,6 +28,7 @@ Complete the following phases in listed order:
 
 1. Run start-twitter-stream.sh (this will take 2-3 minutes).
 
+At this point a few minutes worth of twitter data will be uploaded to Amazon S3. Kafka will still be running. If you would like to send more of the data Kafka is collecting to HDFS you can run the following command as often as you would like (though we recommend once every 2 hours... be aware of how quickly hard drive space is taken up) "hadoop jar camus-SNAPSHOT-shaded.jar com.linkedin.camus.etl.kafka.CamusJob -P camus.properties". Note that this command must be executed while in our main project directory.
 
 ## Make Hive Table:
 
@@ -48,7 +49,7 @@ $ PYSPARK_PYTHON=python3.4 /data/spark15/bin/spark-submit sentiment_analysis_rev
 
 $ ./upload_s3.sh
 
-### At this point a few minutes worth of twitter data will be uploaded to Amazon S3. Kafka will still be running. If you would like to send more of the data Kafka is collecting to HDFS you can run the following command as often as you would like (though we recommend once every 2 hours... be aware of how quickly hard drive space is taken up) "hadoop jar camus-SNAPSHOT-shaded.jar com.linkedin.camus.etl.kafka.CamusJob -P camus.properties". Note that this command must be executed while in our main project directory.
+At this point you have sent fully analyzed Twitter data to Amazon S3.
 
 
 
