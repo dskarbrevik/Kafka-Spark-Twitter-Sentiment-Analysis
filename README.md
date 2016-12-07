@@ -12,20 +12,28 @@ Prerequisites:
 7. Oracle JDK 1.7 (64 bit)
 8. AWS CLI
 
+Complete the following phases in listed order:
+
 Installation:
 
-1. Make sure you are root user (not absolutely necessary, but you will need to do an extra step if not)
-2. Download https://github.com/dskarby/MIDSW205_Project
-3. Make sure the path variable is set for Apache Maven 
-  ("find / -name mvn" to find path or verify path is set using "mvn -v")
-4. CD into project directory
-5. vim start-twitter-stream.sh and edit the line with comment "EDIT THIS PATH" so it points at your Apach Kafka directory
-6. [if not root user] vim camus.config and edit the three path variables (top of file) by changing the part of the current path that says "root" to whatever your current username is.
-7. Run start-twitter-stream.sh (this will take 2-3 minutes)
-8. Start HIVE
-9. hive> create database twitter
-10. hive> use twitter;
-11. Run twitter_data_schema_revised.sql
+1. Make sure you are root user (not absolutely necessary, but you will need to do an extra step if not).
+2. Download https://github.com/dskarby/MIDSW205_Project.
+3. Make sure the path variable is set for Apache Maven .
+  ("find / -name mvn" to find path or verify path is set using "mvn -v").
+4. CD into project directory.
+
+Get Twitter Data:
+
+1. vim start-twitter-stream.sh and edit the line with comment "EDIT THIS PATH" so it points at your Apach Kafka directory (if using our ec2 instance, this is already set correctly).
+2. [if not root user] vim camus.config and edit the three path variables (top of file) by changing the part of the current path that says "root" to whatever your current username is.
+3. Run start-twitter-stream.sh (this will take 2-3 minutes).
+
+Make Hive Table:
+
+1. Start HIVE
+2. hive> create database twitter
+3. hive> use twitter;
+4. Run twitter_data_schema_revised.sql
 
 Create Sentiment Corpus:
 
