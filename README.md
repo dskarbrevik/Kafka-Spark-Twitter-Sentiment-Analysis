@@ -1,6 +1,8 @@
 # MIDSW205_Project - Political Sentiment Analysis
 MIDS W205 Group Project (Section 4 - David Skarbrevik and Shuang Chan)
 
+### For more complete documentation of this project, see W205 Project Documentation PDF file in this repo.
+
 ## Prerequisites:
 
 1. Apache Zookeeper
