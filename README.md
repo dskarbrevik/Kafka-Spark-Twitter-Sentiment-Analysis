@@ -20,13 +20,14 @@ Complete the following phases in listed order:
 2. Download https://github.com/dskarby/MIDSW205_Project.
 3. Make sure the path variable is set for Apache Maven .
   ("find / -name mvn" to find path or verify path is set using "mvn -v").
-4. CD into project directory.
+4. CD into TwitterToHDFS directory of this project
 5. vim start-twitter-stream.sh and edit the line with comment "EDIT THIS PATH" so it points at your Apach Kafka directory (if using our ec2 instance, this is already set correctly).
 6. [if not root user] vim camus.config and edit the three path variables (top of file) by changing the part of the current path that says "root" to whatever your current username is.
 
 ## Get Twitter Data:
 
-1. Run start-twitter-stream.sh (this will take 2-3 minutes).
+1. Make sure you're in "TwitterToHDFS" directory
+2. Run start-twitter-stream.sh (this will take 2-3 minutes).
 
 At this point a few minutes worth of twitter data will be uploaded to Amazon S3. Kafka will still be running. If you would like to send more of the data Kafka is collecting to HDFS you can run the following command as often as you would like (though we recommend once every 2 hours... be aware of how quickly hard drive space is taken up) "hadoop jar camus-SNAPSHOT-shaded.jar com.linkedin.camus.etl.kafka.CamusJob -P camus.properties". Note that this command must be executed while in our main project directory.
 
