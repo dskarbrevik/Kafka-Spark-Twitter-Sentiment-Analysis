@@ -1,7 +1,7 @@
 # MIDSW205_Project - Political Sentiment Analysis
 MIDS W205 Group Project (Section 4 - David Skarbrevik and Shuang Chan)
 
-*** For more complete documentation of this project, see "W205 Project Documentation.pdf" file in this repo. *** 
+*** For more complete documentation of this project, see the "W205 Project Documentation.pdf" file in this repo. *** 
 
 ## Prerequisites:
 
