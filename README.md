@@ -14,7 +14,7 @@ Prerequisites:
 
 Installation:
 
-1. Make sure you are root user (not absolutely necessary, but you will need to do an extra step)
+1. Make sure you are root user (not absolutely necessary, but you will need to do an extra step if not)
 2. Download https://github.com/dskarby/MIDSW205_Project
 3. Make sure the path variable is set for Apache Maven 
   ("find / -name mvn" to find path or verify path is set using "mvn -v")
